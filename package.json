@@ -1,0 +1,25 @@
+{
+  "name": "shopping-list-server",
+  "version": "0.0.0",
+  "description": "Synchronisation server for shopping-list",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shepard/shopping-list-server.git"
+  },
+  "author": "Simon Reinhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shepard/shopping-list-server/issues"
+  },
+  "homepage": "https://github.com/Shepard/shopping-list-server",
+  "dependencies": {
+    "ajv": "^4.0.6",
+    "basic-auth": "^1.0.4",
+    "body-parser": "~1.13.2",
+    "express": "~4.13.4",
+    "morgan": "~1.6.1"
+  }
+}

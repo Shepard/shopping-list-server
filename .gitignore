@@ -1,0 +1,4 @@
+shopping-list-server.sublime-project
+shopping-list-server.sublime-workspace
+node_modules/**
+data/**

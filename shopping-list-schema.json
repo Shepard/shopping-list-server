@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "https://github.com/Shepard/shopping-list-server/raw/master/shopping-list-schema.json",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"minLength": 1
+		},
+		"version": {
+			"type": "number",
+			"multipleOf": 1,
+			"minimum": 0
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"text": {
+						"type": "string",
+						"minLength": 1
+					},
+					"done": {
+						"type": "boolean"
+					},
+					"id": {
+						"type": "string",
+						"pattern": "^id(0|([1-9][0-9]*))$"
+					}
+				},
+				"required": ["text", "done", "id"],
+				"additionalProperties": false
+			},
+			"uniqueItems": true
+		}
+	},
+	"required": ["name", "version", "items"],
+	"additionalProperties": false
+}
