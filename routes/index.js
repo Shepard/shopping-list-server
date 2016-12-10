@@ -2,10 +2,11 @@
 
 const Ajv = require("ajv");
 const dataDirectory = require("../data-directory");
+const fs = require("fs");
 const express = require("express");
 const router = express.Router();
 
-const schema = JSON.parse(fs.readFileSync("../shopping-list-schema.json", "utf8"));
+const schema = JSON.parse(fs.readFileSync("shopping-list-schema.json", "utf8"));
 const ajv = Ajv();
 const validate = ajv.compile(schema);
 
